@@ -51,7 +51,7 @@ public class TechJobs {
                         System.out.println(item);
                     }
                 }
-
+// lots of prints here; I think this would be the place for case insensitive results, idk
             } else { // choice is "search"
 
                 // How does the user want to search (e.g. by skill or employer)
@@ -117,7 +117,14 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
 
-    // Print a list of jobs
+//    // Print a list of jobs = this is the work
+//    To do this, you’ll need to iterate over an ArrayList of jobs.
+//    Each job is itself a HashMap.
+//    While you can get each of the items out of the HashMap using the known keys (employer, location, etc.),
+//    think instead about creating a nested loop to loop over each HashMap.
+//    If a new field is added to the job records, this approach will print out the new field
+//    without any updates to printJobs.
+
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
         System.out.println("printJobs is not implemented yet");

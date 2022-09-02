@@ -25,7 +25,7 @@ public class JobData {
      * without duplicates, for a given column.
      *
      * @param field The column to retrieve values from
-     * @return List of all of the values of the given field
+     * @return List of all the values of the given field
      */
     public static ArrayList<String> findAll(String field) {
 
@@ -60,7 +60,7 @@ public class JobData {
     /**
      * Returns results of search the jobs data by key/value, using
      * inclusion of the search term.
-     *
+
      * For example, searching for employer "Enterprise" will include results
      * with "Enterprise Holdings, Inc".
      *
@@ -71,6 +71,7 @@ public class JobData {
     public static ArrayList<HashMap<String, String>> findByColumnAndValue(String column, String value) {
 
         // load data, if not already loaded
+        //more case-insensitive results?
         loadData();
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
@@ -93,11 +94,49 @@ public class JobData {
      * @param value The search term to look for
      * @return      List of all jobs with at least one field containing the value
      */
+
+
+//    this is also the work
+
+//    This method has been outlined for you but contains none of the code needed to work
+//    (you should leave the loadData() call as the first line of the method, however).
+//    Here are a few observations:
+//    The code that you write should not contain duplicate jobs.
+//    So, for example, if a listing has position type “Web - Front End” and name “Front end web dev”
+//    then searching for “web” should not include the listing twice.
+//    As with printJobs, you should write your code in a way that if a new column is added to the data,
+//    your code will automatically search the new column as well.
+//    You should NOT write code that calls findByColumnAndValue once for each column.
+//    Rather, utilize loops and collection methods as you did above.
+//    You should, on the other hand, read and understand findByColumnAndValue,
+//    since your code will look similar in some ways.
+//
+//    You’ll need to call findByValue from somewhere in main. We’ll leave it up to you to find where. You might have noticed that when you try to search all columns using the app, a message is printed, so that is a good clue to help you find where to place this new method call. Once you find where to call your new method, you can Run the program again to test your code.
+//
+    //also think of case-insensitive since will return string
+
     public static ArrayList<HashMap<String, String>> findByValue(String value) {
 
         // load data, if not already loaded
         loadData();
-
+//        public static ArrayList<HashMap<String, String>> findByColumnAndValue(String column, String value) {
+//
+//            // load data, if not already loaded
+//            loadData();
+//
+//            ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+//
+//            for (HashMap<String, String> row : allJobs) {
+//
+//                String aValue = row.get(column);
+//
+//                if (aValue.contains(value)) {
+//                    jobs.add(row);
+//                }
+//            }
+//
+//            return jobs;
+//        }
         // TODO - implement this method
         return null;
     }
