@@ -102,8 +102,8 @@ public class JobData {
 //    (you should leave the loadData() call as the first line of the method, however).
 //    Here are a few observations:
 //    The code that you write should not contain duplicate jobs.
-//    So, for example, if a listing has position type “Web - Front End” and name “Front end web dev”
-//    then searching for “web” should not include the listing twice.
+//    So, for example, if a listing has position type Web - Front End and name Front end web dev
+//    then searching for web should not include the listing twice.
 //    As with printJobs, you should write your code in a way that if a new column is added to the data,
 //    your code will automatically search the new column as well.
 //    You should NOT write code that calls findByColumnAndValue once for each column.
@@ -111,7 +111,10 @@ public class JobData {
 //    You should, on the other hand, read and understand findByColumnAndValue,
 //    since your code will look similar in some ways.
 //
-//    You’ll need to call findByValue from somewhere in main. We’ll leave it up to you to find where. You might have noticed that when you try to search all columns using the app, a message is printed, so that is a good clue to help you find where to place this new method call. Once you find where to call your new method, you can Run the program again to test your code.
+//    You’ll need to call findByValue from somewhere in main. We’ll leave it up to you to find where.
+//    You might have noticed that when you try to search all columns using the app, a message is printed,
+//    so that is a good clue to help you find where to place this new method call. Once you find where to call your new method,
+//    you can Run the program again to test your code.
 //
     //also think of case-insensitive since will return string
 
