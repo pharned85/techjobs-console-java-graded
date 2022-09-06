@@ -124,10 +124,16 @@ public class JobData {
         loadData();
 //        public static ArrayList<HashMap<String, String>> findByColumnAndValue(String column, String value) {
 //
-//            // load data, if not already loaded
-//            loadData();
+        // okay so it has to search through the data
+        // this is why we load the data first
+        // it has to search through the arrays, so we need some array lists full of hashmaps to give it stuff to search through/for
+        // when it's made, it needs to print an array
+        // so we need a for loop or two, maybe a for loop nested with another, to make sure that it searches through the entirety of these arrays/hashmaps
 //
-//            ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+        //array list as data container
+            ArrayList<HashMap<String, String>> allJobs = JobData.findAll();
+        //the array list for the results
+            ArrayList<HashMap<String, String>> searchResults = new ArrayList<>();
 //
 //            for (HashMap<String, String> row : allJobs) {
 //
@@ -137,11 +143,11 @@ public class JobData {
 //                    jobs.add(row);
 //                }
 //            }
-//
-//            return jobs;
+
+//                }
+//            }
 //        }
-        // TODO - implement this method
-        return null;
+        return searchResults;
     }
 
     /**
