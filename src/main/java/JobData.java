@@ -114,7 +114,7 @@ public class JobData {
 
         for (HashMap<String, String> row: allJobs) {
             for (Map.Entry<String, String> column: row.entrySet()) {
-                if (column.getValue().contains(value)) {
+                if (column.getValue().toLowerCase().contains(value)) {
                     if (Arrays.asList(searchResults).contains(row)) {
                     }
                     searchResults.add(row);
@@ -166,4 +166,3 @@ public class JobData {
             }
 
         }
-    }
