@@ -93,34 +93,20 @@ public class JobData {
      */
 
 
-//    this is also the work
-
-    //also think of case-insensitive since will return string
 
     public static ArrayList<HashMap<String, String>> findByValue(String value) {
-        // load data, if not already loaded
+
         loadData();
-        //okay so it has to search through the data, this is why we load the data first
-        //it has to search through the arrays,
-        // so we need some array lists full of hashmaps to give it stuff to search through/for
-        //when it's made, it needs to print an array
-        //so we need a for loop or two, maybe one nested with another probably,
-        // to make sure that it searches through those hashmaps/arrays and provides the required data
 
-        //array list as data container
-        ArrayList<HashMap<String, String>> allJobs = JobData.findAll();
-        //array list for the results
         ArrayList<HashMap<String, String>> searchResults = new ArrayList<>();
-
-        for (HashMap<String, String> row: allJobs) {
-            for (Map.Entry<String, String> column: row.entrySet()) {
-                if (column.getValue().toLowerCase().contains(value)) {
-                    if (Arrays.asList(searchResults).contains(row)) {
-                    }
-                    searchResults.add(row);
+        for (HashMap<String, String> jobListing : allJobs) {
+            for (Map.Entry<String, String> resultKeyValue : jobListing.entrySet()) {
+                if (resultKeyValue.getValue().toLowerCase().contains(value.toLowerCase()) && !searchResults.contains(jobListing)) {
+                    searchResults.add(jobListing);
                 }
             }
         }
+
         return searchResults;
     }
 
